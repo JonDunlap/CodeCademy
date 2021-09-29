@@ -49,6 +49,9 @@ const _ = {
     }
     return undefined;
   },
+  drop(array, n = 1) {
+    return array.slice(n);
+  },
 };
 
 // Do not write or modify code below this line.
