@@ -52,6 +52,12 @@ const _ = {
   drop(array, n = 1) {
     return array.slice(n);
   },
+  dropWhile(array, predicate) {
+    return this.drop(
+      array,
+      array.findIndex((element, index) => !predicate(element, index, array))
+    );
+  },
 };
 
 // Do not write or modify code below this line.
