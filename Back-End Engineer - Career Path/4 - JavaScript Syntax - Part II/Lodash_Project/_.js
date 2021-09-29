@@ -35,6 +35,14 @@ const _ = {
     if (object[key] === undefined) return false;
     return true;
   },
+  invert(object) {
+    const invertedObject = {};
+    for (const key in object) {
+      const originalValue = object[key];
+      invertedObject[originalValue] = key;
+    }
+    return invertedObject;
+  },
 };
 
 // Do not write or modify code below this line.
