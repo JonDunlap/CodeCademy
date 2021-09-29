@@ -31,6 +31,10 @@ const _ = {
 
     return paddedString;
   },
+  has(object, key) {
+    if (object[key] === undefined) return false;
+    return true;
+  },
 };
 
 // Do not write or modify code below this line.
