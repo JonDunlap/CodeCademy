@@ -58,6 +58,15 @@ const _ = {
       array.findIndex((element, index) => !predicate(element, index, array))
     );
   },
+  chunk(array, size = 1) {
+    const arrayChunks = [];
+
+    for (let index = 0; index < array.length; index += size) {
+      arrayChunks.push(array.slice(index, index + size));
+    }
+
+    return arrayChunks;
+  },
 };
 
 // Do not write or modify code below this line.
